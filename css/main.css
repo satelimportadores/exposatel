@@ -472,7 +472,7 @@ strong,
 		float: left;
 		background: #fff;
 		color: #5677fc;
-		text-transform: capitalize;
+		/*text-transform: capitalize;*/
 		text-align: center;
 		font-size:18px;
     	font-family: 'Opensans';
@@ -1699,4 +1699,6 @@ strong,
 	top: -22px;
 	left: 0;
 }
-
+.justifyText{
+text-align : justify;
+}
