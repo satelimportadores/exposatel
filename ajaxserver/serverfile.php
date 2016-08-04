@@ -32,6 +32,55 @@ if (isset($_GET['submit_email'])) {
         
 
 //        End  PROCESS TO STORE EMAIL GOES HERE
+                //envio de correo
+
+  
+                        $email_from = $email;
+                        $email_to = 'tienda@satelimportadores.com';
+                        $email_subject = 'Registro de exposatel' . ' enviada por: ' . $email;
+                        
+
+                         include_once('class.phpmailer.php');
+                              // Indica si los datos provienen del formulario
+
+                          
+                        $correo = new PHPMailer(); //Creamos una instancia en lugar usar mail()
+                        $correo->AddEmbeddedImage("../img/Invitaciones.png", "my-attach", "Invitaciones.png");
+                        $email_message = 'Registro de exposatel <br> comentario enviado por: <strong>' .$email . "</strong><br> " .$message  . ' <br> ' .' <img alt="PHPMailer" src="cid:my-attach">';
+                       
+                      //Usamos el SetFrom para decirle al script quien envia el correo
+                      $correo->SetFrom($email_from, "Satel Importadores");
+                       
+                      //Usamos el AddReplyTo para decirle al script a quien tiene que responder el correo
+                      $correo->AddReplyTo($email_to,"Satel Importadores");
+                       
+                      //Usamos el AddAddress para agregar un destinatario
+                      $correo->AddAddress($email_to);
+
+                      $correo->AddCC($email, $email);
+                       
+                      //Ponemos el asunto del mensaje
+                      $correo->Subject = $email_subject;
+                       
+                      /*
+                       * Si deseamos enviar un correo con formato HTML utilizaremos MsgHTML:
+                       * $correo->MsgHTML("<strong>Mi Mensaje en HTML</strong>");
+                       * Si deseamos enviarlo en texto plano, haremos lo siguiente:
+                       * $correo->IsHTML(false);
+                       * $correo->Body = "Mi mensaje en Texto Plano";
+                       */
+                      $correo->MsgHTML($email_message);
+                       
+                      //Si deseamos agregar un archivo adjunto utilizamos AddAttachment
+                       
+                      //Enviamos el correo
+                      if(!$correo->Send()) {
+                        echo "Hubo un error: " . $correo->ErrorInfo;
+                      } else {
+                       // echo "Mensaje enviado con exito.";
+                      }
+
+        //envio de correo
 
         $response['success'] = 'You will be notified';
     }
@@ -40,7 +89,7 @@ if (isset($_GET['submit_email'])) {
 } 
 
 /*
- *Handle Message From
+ *Handle Message From-----------------------------------------------------------------------------------
  */
 // check email into post data
 else if (isset($_GET['submit_message'])) {
@@ -120,6 +169,62 @@ else if (isset($_GET['submit_message'])) {
         
         
 //        End  PROCESS TO STORE MESSAGE GOES HERE
+
+                        //envio de correo
+
+  
+                        $email_from = $email;
+                        $email_to = 'tienda@satelimportadores.com';
+                        $email_subject = 'Registro de exposatel' . ' enviada por: ' . $name ;
+
+                       
+
+                         include_once('class.phpmailer.php');
+                              // Indica si los datos provienen del formulario
+
+                          
+                          $correo = new PHPMailer(); //Creamos una instancia en lugar usar mail()
+
+                       $correo->AddEmbeddedImage("../img/Invitaciones.png", "my-attach", "Invitaciones.png");
+                        $email_message = 'Registro de exposatel <br> comentario enviado por: <strong>' .$name . "</strong><br> " .$message  . ' <br> ' .' <img alt="PHPMailer" src="cid:my-attach">';
+                      //Usamos el SetFrom para decirle al script quien envia el correo
+                      $correo->SetFrom($email_from, "Satel Importadores");
+                       
+                      //Usamos el AddReplyTo para decirle al script a quien tiene que responder el correo
+                      $correo->AddReplyTo($email_to,"Satel Importadores");
+                       
+                      //Usamos el AddAddress para agregar un destinatario
+                      $correo->AddAddress($email_to);
+
+                      $correo->AddCC($email, $name);
+                       
+                      //Ponemos el asunto del mensaje
+                      $correo->Subject = $email_subject;
+                       
+                      /*
+                       * Si deseamos enviar un correo con formato HTML utilizaremos MsgHTML:
+                       * $correo->MsgHTML("<strong>Mi Mensaje en HTML</strong>");
+                       * Si deseamos enviarlo en texto plano, haremos lo siguiente:
+                       * $correo->IsHTML(false);
+                       * $correo->Body = "Mi mensaje en Texto Plano";
+                       */
+                      $correo->MsgHTML($email_message);
+                       
+                      //Si deseamos agregar un archivo adjunto utilizamos AddAttachment
+                       
+                      //Enviamos el correo
+                      if(!$correo->Send()) {
+                        echo "Hubo un error: " . $correo->ErrorInfo;
+                      } else {
+                       // echo "Mensaje enviado con exito.";
+                      }
+
+        //envio de correo
+
+
+
+
+
 
         $response['success'] = 'Message sent successfully';
     } else {
