@@ -35,9 +35,9 @@ if (isset($_GET['submit_email'])) {
                 //envio de correo
 
   
-                        $email_from = $email;
-                        $email_to = 'tienda@satelimportadores.com';
-                        $email_subject = 'Registro de exposatel' . ' enviada por: ' . $email;
+                        $email_from = 'tienda@satelimportadores.com';
+                        $email_to = $email;
+                        $email_subject = 'Nos gustaría invitarte a conocernos en Expocamacol 2016 ' . $email;
                         
 
                          include_once('class.phpmailer.php');
@@ -46,18 +46,18 @@ if (isset($_GET['submit_email'])) {
                           
                         $correo = new PHPMailer(); //Creamos una instancia en lugar usar mail()
                         $correo->AddEmbeddedImage("../img/Invitaciones.png", "my-attach", "Invitaciones.png");
-                        $email_message = 'Registro de exposatel <br> comentario enviado por: <strong>' .$email . "</strong><br> " .$message  . ' <br> ' .' <img alt="PHPMailer" src="cid:my-attach">';
+                        $email_message = '¡Gracias por regístrate! '.$email .' Nos gustaría invitarte a conocernos en Expocamacol 2016 en el centro de convenciones Plaza Mayor de Medellín – Stand 25 del pabellón verde, entre el 24 y 27 de Agosto.' . ' <br><br> ' .' <img alt="PHPMailer" src="cid:my-attach">';
                        
                       //Usamos el SetFrom para decirle al script quien envia el correo
                       $correo->SetFrom($email_from, "Satel Importadores");
                        
                       //Usamos el AddReplyTo para decirle al script a quien tiene que responder el correo
-                      $correo->AddReplyTo($email_to,"Satel Importadores");
+                      $correo->AddReplyTo($email_from,"Satel Importadores");
                        
                       //Usamos el AddAddress para agregar un destinatario
                       $correo->AddAddress($email_to);
 
-                      $correo->AddCC($email, $email);
+                      $correo->AddCC($email_from);
                        
                       //Ponemos el asunto del mensaje
                       $correo->Subject = $email_subject;
@@ -72,7 +72,7 @@ if (isset($_GET['submit_email'])) {
                       $correo->MsgHTML($email_message);
                        
                       //Si deseamos agregar un archivo adjunto utilizamos AddAttachment
-                       
+                       $correo->CharSet = 'UTF-8';
                       //Enviamos el correo
                       if(!$correo->Send()) {
                         echo "Hubo un error: " . $correo->ErrorInfo;
@@ -173,9 +173,9 @@ else if (isset($_GET['submit_message'])) {
                         //envio de correo
 
   
-                        $email_from = $email;
-                        $email_to = 'tienda@satelimportadores.com';
-                        $email_subject = 'Registro de exposatel' . ' enviada por: ' . $name ;
+                        $email_from = 'tienda@satelimportadores.com';
+                        $email_to = $email;
+                        $email_subject = 'Nos gustaría invitarte a conocernos en Expocamacol 2016 ' . $name ;
 
                        
 
@@ -184,19 +184,20 @@ else if (isset($_GET['submit_message'])) {
 
                           
                           $correo = new PHPMailer(); //Creamos una instancia en lugar usar mail()
-
+                        
                        $correo->AddEmbeddedImage("../img/Invitaciones.png", "my-attach", "Invitaciones.png");
-                        $email_message = 'Registro de exposatel <br> comentario enviado por: <strong>' .$name . "</strong><br> " .$message  . ' <br> ' .' <img alt="PHPMailer" src="cid:my-attach">';
+                        $email_message = 
+                        'Hemos recibido tu comentario: “'. $message . '”, te contactaremos tan pronto como sea posible. Por ahora, Nos gustaría invitarte a conocernos en Expocamacol 2016 en el centro de convenciones Plaza Mayor de Medellín – Stand 25 del pabellón verde, entre el 24 y 27 de Agosto. ' . ' <br><br> ' .' <img alt="PHPMailer" src="cid:my-attach">';
                       //Usamos el SetFrom para decirle al script quien envia el correo
                       $correo->SetFrom($email_from, "Satel Importadores");
                        
                       //Usamos el AddReplyTo para decirle al script a quien tiene que responder el correo
-                      $correo->AddReplyTo($email_to,"Satel Importadores");
+                      $correo->AddReplyTo($email_from,"Satel Importadores");
                        
                       //Usamos el AddAddress para agregar un destinatario
-                      $correo->AddAddress($email_to);
+                      $correo->AddAddress($email_to,$name);
 
-                      $correo->AddCC($email, $name);
+                      $correo->AddCC($email_from);
                        
                       //Ponemos el asunto del mensaje
                       $correo->Subject = $email_subject;
@@ -211,7 +212,7 @@ else if (isset($_GET['submit_message'])) {
                       $correo->MsgHTML($email_message);
                        
                       //Si deseamos agregar un archivo adjunto utilizamos AddAttachment
-                       
+                       $correo->CharSet = 'UTF-8';
                       //Enviamos el correo
                       if(!$correo->Send()) {
                         echo "Hubo un error: " . $correo->ErrorInfo;

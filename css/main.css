@@ -1538,7 +1538,8 @@ strong,
     display: block;
     width: 100%;
     box-shadow: none;
-    min-height: 108px;
+    /*min-height: 108px;*/
+    height: 4px;
 	margin-top: 3px;
 } 
 .page .message-ok{
