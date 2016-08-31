@@ -1,8 +1,4 @@
-Name: juan 
-Email: juan@satelimportadores.com 
-Message: mensaje.. .. ..
----------
-Name: pedro 
-Email: pedro@satelimportadores.com 
-Message: asjkdhjkash ahdjkashdjk kjashdjkhasjk
----------
+Name: Hernan Aristizabal 
+Email: haristi62@hotmail.com 
+Message: Necesito registrarme para obtener las entradas e imformacion
+---------
