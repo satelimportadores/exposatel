@@ -192,7 +192,7 @@ http://themeforest.net/licenses
 						</div>
 						<div class="h-right">
 							<h4>¿Problemas con los materiales para tu <br><font color="red"><strong>Red Contra Incendios</strong></font> ?</font> </h4>
-							<p><strong>Contáctanos</strong>, tenemos soluciones ideales en <strong><font color="red">RCI</font></strong> y <strong><font color="#1ceeff">conducción de fluidos</font></strong> en general</p>
+							<p>Veámonos en <strong>ExpoCamacol 2016</strong>, tenemos soluciones ideales en <strong><font color="red">RCI</font></strong> y <strong><font color="#1ceeff">conducción de fluidos</font></strong> en general</p>
 							<h4 class="subhead"><a href="https://www.google.com.co/maps/place/Centro+de+Convenciones+Plaza+Mayor/@6.2436186,-75.5767528,229m/data=!3m1!1e3!4m13!1m7!3m6!1s0x8e4429ab627545c1:0x23674fd4c47ec19c!2sPlaza+Mayor!3b1!8m2!3d6.2435!4d-75.57616!3m4!1s0x0:0xe6f3188931e8f9f3!8m2!3d6.24384!4d-75.5759?hl=es" target="_blank">Pabellón Verde - STAND 25</a></h4>
 							<br>
 							<a target="_blank" class="" href="http://www.satelimportadores.com/pdfs/Portafolio%20Completo%20Satel%20Liviano.pdf"><button>Conoce nuestro portafolio</button></a>
@@ -218,55 +218,26 @@ http://themeforest.net/licenses
             <!-- Begin of register page -->
             <div class="section page-register page page-cent"  id="s-register">
                 <section class="content">
-
-					<!--formulario de contacto-->
-
-						<header class="p-title">
-							<h3>Escríbenos<i class="ion ion-email">
-								</i>
-							</h3>
-
-						</header>
-						<!-- Begin Of Page SubSction -->
-						
-						<div class="page-block c-right v-zoomIn">
-							<div class="wrapper">
-								<div>
-									<form class="message form send_message_form" method="get" action="ajaxserver/serverfile.php">
-										<div class="fields clearfix">
-											<div class="input">
-												<label for="mes-name">Nombre: </label>
-												<input id="mes-name" name="name" type="text" placeholder="Su nombre" required></div>
-
-										</div>
-										<div class="fields clearfix">
-											<div class="input">
-												<label for="mes-email">Email: </label>
-												<input id="mes-email" type="email" placeholder="Dirección de correo electrónico" name="email" required>
-
-											</div>
-										</div>
-										<div class="fields clearfix no-border">
-											<label for="mes-text">Mensaje: </label>
-											<textarea id="mes-text" placeholder="Mensaje ..." name="message" required></textarea>
-
-											<div>
-												<p class="message-ok invisible">Tu mensaje ha sido enviado, gracias por contactarnos</p>
-											</div>
-										</div>
-										<br class="hidegif">
-										<br class="hidegif">
-												<div class="buttons">
-												<button id="submit-message" class="button email_b" name="submit_message">Enviar</button>
-											</div>
-									</form>
+                    <header class="p-title">
+                        <h3>Regístrate <i class="ion ion-compose"></i></h3> 
+						<h4 class="subhead hidegif">Regístrate para obtener las últimas noticias de Satel Importadores</h4>
+                    </header>
+                    <div>
+                        <form id="mail-subscription" class="form magic send_email_form" method="get" action="ajaxserver/serverfile.php">
+                            <p class="invite">
+Por favor , escribe tu correo electrónico para mantenerse en contacto con nosotros :</p>
+							<div class="fields clearfix">
+								<div class="input">
+									<label for="reg-email">Email </label>
+									<input id="reg-email" class="email_f"  name="email" type="email" required placeholder="ventas@satelimportadores.com" data-validation-type="email"></div>
+								<div class="buttons">
+									<button id="submit-email" class="button email_b" name="submit_email">Ok</button>
 								</div>
 							</div>
-						</div>
-						<!-- End Of Page SubSction -->
-
-					<!--formulario de contacto-->
-					
+                            
+                            <p class="email-ok invisible"><strong>Gracias</strong> para su suscripción. Te informaremos.</p>
+                        </form>
+                    </div>
                 </section>
                 <footer class="p-footer p-scrolldown">
                     <a href="#home">
@@ -322,7 +293,17 @@ http://themeforest.net/licenses
 							<h3>Contacto<i class="ion ion-location">
 								</i>
 							</h3>
-
+							<ul class="buttons">
+								<li class="show-for-medium-up">
+									<a title="About" href="#about-us" ><i class="ion ion-android-information "></i></a>
+								</li>
+								<!--<li>
+									<a title="Contact" href="#contact/information"><i class="ion ion-location"></i></a>
+								</li>-->
+								<li>
+									<a title="Message" href="#contact/message"><i class="ion ion-email"></i></a>
+								</li>
+							</ul>
 						</header>
 						<!-- Begin Of Page SubSction -->
 						<div class="contact">
@@ -331,7 +312,7 @@ http://themeforest.net/licenses
 									<ul>
 										<li>
 											<h4>Email</h4>
-											<p><a href="mailto://gerencia@satelimportadores.com">gerencia@satelimportadores.com</a></p>
+											<p><a href="mailto://ventasnacionales@satelimportadores.com">ventasnacionales@satelimportadores.com</a></p>
 										</li>
 										<li>
 											<h4>Dirección</h4>
@@ -380,8 +361,59 @@ http://themeforest.net/licenses
 				<!-- begin of contact message --> 
 				<div class="slide" id="s-message" data-anchor="message">
 					<section class="content">
-						<!--donde estaba el formulario-->
-						<!--donde estaba el formulario-->
+						<header class="p-title">
+							<h3>Escríbenos<i class="ion ion-email">
+								</i>
+							</h3>
+							<ul class="buttons">
+								<li class="show-for-medium-up">
+									<a title="About" href="#about-us"><i class="ion ion-android-information"></i></a>
+								</li>
+								<li>
+									<a title="Contact" href="#contact/information"><i class="ion ion-location"></i></a>
+								</li>
+								<!--<li>
+									<a title="Message" href="#contact/message"><i class="ion ion-email"></i></a>
+								</li>-->
+							</ul>
+						</header>
+						<!-- Begin Of Page SubSction -->
+						
+						<div class="page-block c-right v-zoomIn">
+							<div class="wrapper">
+								<div>
+									<form class="message form send_message_form" method="get" action="ajaxserver/serverfile.php">
+										<div class="fields clearfix">
+											<div class="input">
+												<label for="mes-name">Nombre: </label>
+												<input id="mes-name" name="name" type="text" placeholder="Su nombre" required></div>
+
+										</div>
+										<div class="fields clearfix">
+											<div class="input">
+												<label for="mes-email">Email: </label>
+												<input id="mes-email" type="email" placeholder="Dirección de correo electrónico" name="email" required>
+
+											</div>
+										</div>
+										<div class="fields clearfix no-border">
+											<label for="mes-text">Mensaje: </label>
+											<textarea id="mes-text" placeholder="Mensaje ..." name="message" required></textarea>
+
+											<div>
+												<p class="message-ok invisible">Tu mensaje ha sido enviado, gracias por contactarnos</p>
+											</div>
+										</div>
+										<br class="hidegif">
+										<br class="hidegif">
+												<div class="buttons">
+												<button id="submit-message" class="button email_b" name="submit_message">Enviar</button>
+											</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<!-- End Of Page SubSction -->
 					</section>
 						
 				</div>
