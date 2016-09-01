@@ -436,6 +436,10 @@ strong,
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
 */
 }
+.gracias{
+	margin-top: 25%;
+	margin-left: 14%
+}
 .header-top.material{
 	background: rgba(255, 255, 255, 0.15);
 	-webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 0px 2px 0px rgba(0, 0, 0, 0.1);

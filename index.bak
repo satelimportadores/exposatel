@@ -116,14 +116,14 @@ http://themeforest.net/licenses
         <!-- BEGIN OF site cover -->
         <div class="page-cover" id="s-cover">
             <!-- Cover Background -->
-            <!-- <div class="cover-bg pos-abs full-size bg-img" data-image-src="img/bg2.jpg"></div> -->
+            <div class="cover-bg pos-abs full-size bg-img" data-image-src="img/bg2.jpg"></div>
 			
-            <!-- BEGIN OF Slideshow Background-->
+            <!-- BEGIN OF Slideshow Background
             <div class="cover-bg pos-abs full-size slide-show">
-				<i class='img' data-src='./img/01.jpg'></i>
-				<i class='img' data-src='./img/02.jpg'></i>
-				<i class='img' data-src='./img/03.jpg'></i>
-
+				<i class='img' data-src='./img/bg-slide1.jpg'></i>
+				<i class='img' data-src='./img/bg-slide2.jpg'></i>
+				<i class='img' data-src='./img/bg-slide3.jpg'></i>
+				<i class='img' data-src='./img/bg-slide4.jpg'></i>
 			</div>
             <!-- END OF Slideshow Background -->
             
@@ -147,23 +147,43 @@ http://themeforest.net/licenses
 		
 		<!-- Begin of timer pane -->
 		<div class="pane-when " id="s-when">
-<img class="gracias" src="./img/imagen-gracias.png" alt="¡Gracias por asistir!">
 			<div class="content">
-
 				<!-- Clock -->
 				<div class="clock clock-countdown">
-
 					<div class="site-config"
 						 data-date="8/24/2016 00:00:00" 
 						 data-date-timezone="-5"
 						 ></div>					
-
+					<div class="elem-center">
+						<div class="digit">
+							<span class="days">81</span>
+							<span class="txt">días</span>
+						</div>
+					</div>
+					<!-- Logo instead -->
+<!--
+					<div class="logo">
+						<a href="#">
+							<img src="img/logo_only.png">
+						</a>
+					</div>
+-->
 					
-
+					<div class="elem-bottom">
+						<div class="deco"></div>
+						
+<!--						<span class="days">12</span><span class="thin">D</span>-->
+						<span class="hours">18</span><span class="thin">H</span>
+						<span class="minutes">45</span><span class="thin">MN</span>
+						<span class="seconds">36</span><span class="thin">S</span>
+					</div>
 				</div> 
 				
 				
-               
+				<footer>
+					<p><strong>EXPOCAMACOL 2016</strong></p>
+					<p class="hidegif">XXII FERIA INTERNACIONAL DE CONSTRUCCIÓN, ARQUITECTURA Y DISEÑO<strong> SATEL IMPORTADORES DE FERRETERÍA</strong><br></p>
+				</footer>                
 			</div> 
 		</div>
 		<!-- End of timer pane -->

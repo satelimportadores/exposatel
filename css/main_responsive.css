@@ -184,6 +184,10 @@ http://themeforest.net/licenses
 		.hidegif{
 		display: none;
 	}
+	.gracias{
+	margin-top: 5%;
+	margin-left: 5%
+}
 
 	.pane-when{
 		top: 48px;
