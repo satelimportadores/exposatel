@@ -71,6 +71,11 @@ http://themeforest.net/licenses
 		padding-left: 32px;
 		padding-right: 56px;
 	}
+	.gracias{
+	margin-top: 5%;
+	margin-left: 1%;
+	width: 50%;
+}
 	
 }
 /* Screen Small than 768px */
@@ -186,7 +191,8 @@ http://themeforest.net/licenses
 	}
 	.gracias{
 	margin-top: 5%;
-	margin-left: 5%
+	margin-left: 25%;
+	width: 50%;
 }
 
 	.pane-when{
